@@ -189,7 +189,7 @@ export default function Contact() {
                 <option value="dealership">Dealership</option>
                 <option value="collision-center">Collision Center</option>
                 <option value="detail-shop">Detail Shop</option>
-                <option value="custom-builder">Custom Builder</option>
+                <option value="customization-shop">Customization Shop</option>
                 <option value="performance-shop">Performance Shop</option>
                 <option value="auto-repair">Auto Repair</option>
                 <option value="other">Other</option>
