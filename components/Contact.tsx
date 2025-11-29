@@ -23,8 +23,15 @@ export default function Contact() {
     setSuccessMessage(false)
 
     // Brevo API Configuration
-    const BREVO_API_KEY = process.env.NEXT_PUBLIC_BREVO_API_KEY || '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'
+    const BREVO_API_KEY = process.env.NEXT_PUBLIC_BREVO_API_KEY
     const BREVO_LIST_ID = 5
+
+    if (!BREVO_API_KEY) {
+      console.error('Brevo API key not found. Please set NEXT_PUBLIC_BREVO_API_KEY in .env.local')
+      setErrorMessage(true)
+      setIsSubmitting(false)
+      return
+    }
 
     const payload = {
       email: formData.email,

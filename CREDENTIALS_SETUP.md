@@ -1,12 +1,12 @@
 # Brevo Credentials Configuration
 
-## ✅ Credentials Added
+## ✅ Credentials Configuration
 
-Your Brevo API credentials have been integrated into the exit-intent popup.
+Your Brevo API credentials are configured via environment variables for security.
 
 **Configured:**
-- **API Key:** xkeysib-870df...bf43-Qm9R61sWSmYHqQRo
-- **List ID:** 2
+- **API Key:** Stored in .env.local
+- **List ID:** 2 (Exit Intent Popup), 5 (Contact Form)
 
 ---
 
