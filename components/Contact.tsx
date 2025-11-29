@@ -248,7 +248,7 @@ export default function Contact() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                Message sent! I'll get back to you within 24 hours.
+                Message sent! I&apos;ll get back to you within 24 hours.
               </p>
             </div>
           )}

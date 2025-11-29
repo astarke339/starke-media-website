@@ -169,7 +169,7 @@ export default function ExitIntentPopup() {
                     </p>
 
                     <p className="text-gray-300 text-base mb-6 font-body leading-relaxed">
-                      I'll review your current content and send you a personalized breakdown of what's working, what's not, and how to create content that actually converts.
+                      I&apos;ll review your current content and send you a personalized breakdown of what&apos;s working, what&apos;s not, and how to create content that actually converts.
                     </p>
 
                     <form onSubmit={handleSubmit} className="space-y-4">
