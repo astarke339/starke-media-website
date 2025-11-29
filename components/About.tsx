@@ -31,7 +31,6 @@ export default function About() {
                   <div className="w-48 h-48 mx-auto bg-luxury-green-darkest border-2 border-bronze rounded-full flex items-center justify-center mb-4">
                     <span className="font-display text-6xl text-bronze">AS</span>
                   </div>
-                  <p className="text-gray-300 text-sm font-body">Photo coming soon</p>
                 </div>
               </div>
             </div>

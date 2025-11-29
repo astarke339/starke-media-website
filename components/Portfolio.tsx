@@ -56,14 +56,9 @@ export default function Portfolio() {
                   </svg>
                 </div>
                 <p className="text-bronze text-lg font-body mb-2">Video Showcase</p>
-                <p className="text-gray-300 text-sm font-body">Upload your video montage to /public/video/portfolio-reel.mp4</p>
               </div>
             </div>
           </div>
-
-          <p className="text-gray-medium text-sm text-center mt-6 font-body">
-            Tip: Upload a looping video montage of your best automotive shots to /public/video/portfolio-reel.mp4
-          </p>
         </motion.div>
       </div>
     </section>
