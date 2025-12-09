@@ -102,7 +102,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 text-center"
         >
-          Ready to Scale Your Content?
+          Let&apos;s Talk
         </motion.h2>
 
         <motion.p
@@ -112,7 +112,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-gray-300 text-lg md:text-xl text-center mb-12 font-body"
         >
-          Let&apos;s discuss a custom package for your automotive business
+          Tell us about your project and we&apos;ll get back within 24 hours.
         </motion.p>
 
         <motion.div
@@ -138,7 +138,7 @@ export default function Contact() {
               <div className="w-full border-t border-bronze-dark/30"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 text-gray-medium font-body" style={{ backgroundColor: '#063831' }}>or send a message</span>
+              <span className="px-4 text-gray-medium font-body" style={{ backgroundColor: '#063831' }}>or fill out the form</span>
             </div>
           </div>
 
@@ -236,7 +236,7 @@ export default function Contact() {
               disabled={isSubmitting}
               className="w-full py-4 bg-bronze text-black font-semibold rounded-sm transition-all duration-300 hover:bg-gold-light hover:bronze-glow transform hover:scale-[1.02] flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+              <span>{isSubmitting ? 'Sending...' : 'Send It'}</span>
               {!isSubmitting && <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />}
             </button>
           </form>
@@ -248,7 +248,7 @@ export default function Contact() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                Message sent! I&apos;ll get back to you within 24 hours.
+                Got it. Expect a response within 24 hours.
               </p>
             </div>
           )}
@@ -274,7 +274,7 @@ export default function Contact() {
           className="text-center mt-12"
         >
           <p className="text-gray-medium text-sm font-body">
-            Trusted by automotive businesses across Michigan
+            Trusted by businesses across Michigan
           </p>
         </motion.div>
       </div>

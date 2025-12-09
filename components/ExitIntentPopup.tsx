@@ -161,15 +161,15 @@ export default function ExitIntentPopup() {
                 ) : (
                   <>
                     <h2 className="font-display text-3xl md:text-4xl text-white mb-3">
-                      Before You Go...
+                      Wait—
                     </h2>
 
                     <p className="text-bronze text-lg md:text-xl mb-4 font-body">
-                      Get a Free Content Audit for Your Business
+                      Free Content Audit
                     </p>
 
                     <p className="text-gray-300 text-base mb-6 font-body leading-relaxed">
-                      I&apos;ll review your current content and send you a personalized breakdown of what&apos;s working, what&apos;s not, and how to create content that actually converts.
+                      I&apos;ll review your content and send back a personalized breakdown—what&apos;s working, what&apos;s not, and what to do next.
                     </p>
 
                     <form onSubmit={handleSubmit} className="space-y-4">
@@ -215,7 +215,7 @@ export default function ExitIntentPopup() {
                       color: '#0a0a0a'
                     }}
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Me My Audit'}
+                    {isSubmitting ? 'Sending...' : 'Get My Audit'}
                   </button>
                 </form>
 

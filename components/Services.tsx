@@ -13,22 +13,22 @@ const services: Service[] = [
   {
     icon: <Video className="w-12 h-12" />,
     title: 'Remote Content Editing',
-    description: "Send us your footage and we'll transform it into scroll-stopping social content. Professional editing, color grading, and strategic posting—perfect for shops with team members who can capture footage but need expert post-production.",
+    description: "You film. We edit. Send raw footage from your phone and get back polished, platform-ready content within 48 hours. Perfect for teams who can capture but need professional post-production.",
   },
   {
     icon: <Target className="w-12 h-12" />,
     title: 'Social Media Management',
-    description: 'Complete content calendars, daily posting, caption writing, and hashtag strategy. We handle the entire process while you focus on running your business—designed to serve multiple clients efficiently with proven systems.',
+    description: 'Full-service social media: strategy, scheduling, posting, engagement. We run your accounts so you can run your business. Proven systems built for consistency and growth.',
   },
   {
     icon: <Lightbulb className="w-12 h-12" />,
     title: 'Marketing Strategy & Consulting',
-    description: "Monthly performance reviews, content strategy development, and brand positioning guidance. We analyze what's working and optimize your content for maximum ROI and local market dominance.",
+    description: "Monthly strategy sessions, performance analysis, and brand positioning. We find what&apos;s working, cut what&apos;s not, and optimize for ROI.",
   },
   {
     icon: <Camera className="w-12 h-12" />,
     title: 'On-Site Video Production',
-    description: 'Professional filming sessions at your location with cinematic equipment and techniques. Flexible scheduling from monthly visits to weekly sessions based on your content needs and package level.',
+    description: 'Professional filming at your location. Cinematic quality without the Hollywood budget. Flexible scheduling—monthly, bi-weekly, or weekly sessions.',
   },
 ]
 
@@ -43,7 +43,7 @@ export default function Services() {
           viewport={{ once: true }}
           className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-16 text-center"
         >
-          What We Do
+          Services
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

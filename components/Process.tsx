@@ -12,22 +12,22 @@ const steps: ProcessStep[] = [
   {
     number: '01',
     title: 'Discovery Call',
-    description: 'Understand your business goals, target audience, and content needs',
+    description: '30-minute call to understand your business, goals, and current content gaps',
   },
   {
     number: '02',
     title: 'Content Strategy',
-    description: 'Build a custom content calendar and filming schedule optimized for your market',
+    description: 'Custom content plan built around your audience, industry, and budget',
   },
   {
     number: '03',
     title: 'Production & Editing',
-    description: 'Efficient filming sessions (if needed) and professional post-production with fast turnarounds',
+    description: 'We handle production and editing. You approve final cuts. Fast turnarounds, no surprises.',
   },
   {
     number: '04',
     title: 'Launch & Optimize',
-    description: 'Deploy content consistently and analyze performance data monthly',
+    description: 'Content goes live. We track results and refine monthly.',
   },
 ]
 
@@ -42,7 +42,7 @@ export default function Process() {
           viewport={{ once: true }}
           className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-20 text-center"
         >
-          How It Works
+          The Process
         </motion.h2>
 
         <div className="relative">

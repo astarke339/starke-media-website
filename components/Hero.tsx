@@ -21,7 +21,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="font-display text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight"
         >
-          Automotive Content That Converts
+          Content That Sells
         </motion.h1>
 
         <motion.p
@@ -30,7 +30,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-gray-300 text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto font-light"
         >
-          Video production and social media management for automotive businesses of all types—dealerships, detail shops, performance garages, and beyond. Remote editing available nationwide. On-site production across Michigan.
+          Cinematic video and strategic social media for businesses that need to be seen. We turn your daily operations into content that drives revenue—not just engagement.
         </motion.p>
 
         <motion.div
@@ -43,19 +43,19 @@ export default function Hero() {
             onClick={() => scrollToSection('portfolio')}
             className="group px-8 py-4 border-2 border-bronze text-bronze font-semibold rounded-sm transition-all duration-300 hover:bg-bronze hover:text-black hover:bronze-glow transform hover:scale-105 min-w-[200px]"
           >
-            See Our Work
+            See the Work
           </button>
           <button
             onClick={() => scrollToSection('contact')}
             className="group px-8 py-4 bg-bronze text-black font-semibold rounded-sm transition-all duration-300 hover:bg-gold-light hover:bronze-glow transform hover:scale-105 min-w-[200px]"
           >
-            Contact Us
+            Start a Project
           </button>
           <button
             onClick={() => scrollToSection('pricing')}
             className="group px-8 py-4 border-2 border-bronze text-bronze font-semibold rounded-sm transition-all duration-300 hover:bg-bronze hover:text-black hover:bronze-glow transform hover:scale-105 min-w-[200px]"
           >
-            View Packages
+            View Pricing
           </button>
         </motion.div>
       </div>

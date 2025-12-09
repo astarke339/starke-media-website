@@ -13,7 +13,7 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-8 text-center"
         >
-          The Work
+          Recent Work
         </motion.h2>
 
         <motion.p
@@ -23,7 +23,7 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="text-gray-300 text-lg md:text-xl text-center mb-16 max-w-2xl mx-auto font-body"
         >
-          A showcase of results-driven content and storytelling
+          See what we create. No stock footage. No templates.
         </motion.p>
 
         <motion.div

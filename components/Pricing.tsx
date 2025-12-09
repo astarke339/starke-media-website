@@ -27,12 +27,12 @@ const tiers: PricingTier[] = [
       '2 revision rounds per piece',
       'No on-site visits required',
     ],
-    idealFor: 'Perfect for shops with team members who can capture footage',
+    idealFor: 'For teams who can shoot but need expert editing',
   },
   {
     name: 'Starter Package',
     price: 'Starting at $1,500',
-    description: 'Professional content foundation',
+    description: 'For businesses starting fresh',
     badge: 'Best for New Clients',
     features: [
       '8-10 premium pieces monthly',
@@ -42,12 +42,12 @@ const tiers: PricingTier[] = [
       'Content calendar and posting strategy',
       'Captions and hashtag optimization',
     ],
-    idealFor: 'Build your social presence with minimal disruption',
+    idealFor: 'Get started without overhauling your operations',
   },
   {
     name: 'Growth Package',
     price: 'Starting at $2,800',
-    description: 'Complete content solution',
+    description: 'For businesses ready to scale',
     badge: 'Most Popular',
     features: [
       '12-15 premium pieces monthly',
@@ -58,12 +58,12 @@ const tiers: PricingTier[] = [
       'Performance tracking and optimization',
       'Priority support and fast turnarounds',
     ],
-    idealFor: 'Dominate your local market with consistent, high-quality content',
+    idealFor: 'Consistent content that builds audience and drives sales',
   },
   {
     name: 'Premium Package',
     price: 'Starting at $5,000',
-    description: 'Complete marketing solution',
+    description: 'For market leaders',
     badge: 'Full Service',
     features: [
       '18-25 premium pieces monthly',
@@ -74,7 +74,7 @@ const tiers: PricingTier[] = [
       'Monthly strategy and analytics review',
       'Dedicated account management',
     ],
-    idealFor: 'Complete marketing solution for market leaders',
+    idealFor: 'Full-service content for businesses serious about growth',
   },
 ]
 
@@ -117,7 +117,7 @@ export default function Pricing() {
           viewport={{ once: true }}
           className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-16 text-center"
         >
-          Work With Me
+          Packages
         </motion.h2>
 
         {/* Pricing Tiers */}
@@ -198,10 +198,10 @@ export default function Pricing() {
           style={{ backgroundColor: 'rgba(6, 56, 49, 0.5)' }}
         >
           <h3 className="font-display text-2xl md:text-3xl text-white mb-3">
-            Custom Production Available
+            Need Something Bigger?
           </h3>
           <p className="text-gray-300 text-base md:text-lg font-body max-w-3xl mx-auto">
-            Need more intensive filming schedules or specialized content? We offer custom packages with frequent on-site production and dedicated project timelines. Book a call to discuss your specific needs.
+            We build custom packages for brands with unique production needs. Let&apos;s talk.
           </p>
         </motion.div>
 
@@ -216,7 +216,7 @@ export default function Pricing() {
             Premium Add-Ons
           </h3>
           <p className="text-gray-300 text-lg font-body text-center mb-10">
-            Enhance your package with specialized services:
+            Add to any package:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

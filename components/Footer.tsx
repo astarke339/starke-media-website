@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center space-y-6">
           <div className="text-center space-y-2 mb-4">
             <p className="text-gray-300 font-body text-sm">
-              Trusted by automotive businesses across Michigan
+              Trusted by businesses across Michigan
             </p>
           </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
               © 2024 Starke Media. Built in Michigan.
             </p>
             <p className="text-gray-medium font-body text-xs">
-              Automotive Video Production | Social Media Management | Content Marketing
+              Video Production • Social Media • Content Strategy
             </p>
             <p className="text-gray-medium font-body text-xs">
               Serving Detroit, Grand Rapids, Ann Arbor, and surrounding Michigan communities

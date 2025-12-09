@@ -14,7 +14,7 @@ export default function About() {
           viewport={{ once: true }}
           className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-16 text-center"
         >
-          Who I Am
+          About
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -50,18 +50,16 @@ export default function About() {
             <p className="text-bronze text-lg font-body mb-6">Founder</p>
             
             <p className="text-gray-300 text-lg md:text-xl font-body leading-relaxed">
-              Built my foundation in automotive customization—car wrapping, paint protection film, and detailing. 
-              Transitioned to content marketing when I realized automotive businesses needed consistent, conversion-focused content, 
-              not just one-off productions.
+              Started in the automotive industry—wrapping, PPF, detailing. Learned that most businesses don&apos;t need more content. They need better content, posted consistently, with a strategy behind it.
             </p>
 
             <p className="text-gray-300 text-lg md:text-xl font-body leading-relaxed">
-              Today, Starke Media serves multiple automotive businesses across Michigan with scalable content packages designed for efficiency and results. I combine hands-on automotive industry experience with data-driven marketing strategy to help shops, dealerships, and builders dominate their local markets on social media.
+              Now I help businesses across Michigan and beyond turn their daily operations into content that actually moves the needle. No fluff. No vanity metrics. Just work that drives revenue.
             </p>
 
             <div className="pt-4 space-y-4">
               <p className="text-bronze text-lg font-body">
-                Based in Michigan. Building in public @austin.starke
+                Based in Michigan. Sharing the process @austin.starke
               </p>
               
               <a

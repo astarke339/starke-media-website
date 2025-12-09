@@ -22,19 +22,19 @@ const jetbrains = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Automotive Content Marketing & Video Editing | Starke Media Michigan',
-  description: 'Professional automotive content creation and social media management for Michigan dealerships, detail shops, and custom builders. Scalable monthly packages starting at $900.',
-  keywords: ['automotive content marketing michigan', 'car dealership video production', 'automotive social media management', 'detail shop marketing', 'auto shop video content'],
+  title: 'Starke Media | Video Production & Social Media for Michigan Businesses',
+  description: 'Cinematic video production and social media management for businesses in Michigan. Monthly packages from $900.',
+  keywords: ['video production michigan', 'social media management', 'content marketing michigan', 'business video content', 'michigan video agency'],
   openGraph: {
-    title: 'Automotive Content Marketing & Video Editing | Starke Media Michigan',
-    description: 'Professional automotive content creation and social media management for Michigan dealerships, detail shops, and custom builders. Scalable monthly packages starting at $900.',
+    title: 'Starke Media | Video Production & Social Media for Michigan Businesses',
+    description: 'Cinematic video production and social media management for businesses in Michigan. Monthly packages from $900.',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Automotive Content Marketing & Video Editing | Starke Media Michigan',
-    description: 'Professional automotive content creation and social media management for Michigan dealerships, detail shops, and custom builders.',
+    title: 'Starke Media | Video Production & Social Media for Michigan Businesses',
+    description: 'Cinematic video production and social media management for businesses in Michigan.',
   },
 }
 

@@ -12,22 +12,22 @@ interface Stat {
 const stats: Stat[] = [
   {
     value: '59%',
-    label: 'Automotive shoppers spend more time on dealer sites with video',
-    source: 'Google Automotive',
+    label: 'of prospects spend more time on sites with video content',
+    source: 'Google Research',
   },
   {
     value: '71%',
-    label: 'Of car buyers say video builds trust in their purchase decision',
+    label: 'of buyers say video builds trust before purchasing',
     source: 'CDK Global',
   },
   {
     value: '5x',
-    label: 'Social media delivers higher ROI than traditional advertising for auto businesses',
-    source: 'Automotive News',
+    label: 'Social media delivers higher ROI than traditional advertising',
+    source: 'Industry Research',
   },
   {
     value: '49%',
-    label: 'Businesses using video grow revenue faster year-over-year',
+    label: 'Video-first businesses grow revenue faster year-over-year',
     source: 'Aberdeen Group',
   },
 ]
