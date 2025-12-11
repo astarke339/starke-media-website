@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { Instagram } from 'lucide-react'
 
 export default function About() {
@@ -25,13 +26,16 @@ export default function About() {
             viewport={{ once: true }}
             className="relative group"
           >
-            <div className="aspect-[4/5] bg-gradient-to-br from-luxury-green-dark to-luxury-green rounded-sm overflow-hidden border-2 border-bronze-dark hover:border-bronze transition-all duration-300">
-              <div className="w-full h-full flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-300">
-                <div className="text-center p-8">
-                  <div className="w-48 h-48 mx-auto bg-luxury-green-darkest border-2 border-bronze rounded-full flex items-center justify-center mb-4">
-                    <span className="font-display text-6xl text-bronze">AS</span>
-                  </div>
-                </div>
+            <div className="aspect-[4/5] rounded-sm overflow-hidden border-2 border-bronze-dark hover:border-bronze transition-all duration-300">
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Portrait of Austin Starke"
+                  fill
+                  priority
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent pointer-events-none" />
               </div>
             </div>
           </motion.div>
