@@ -37,8 +37,9 @@ export default function Portfolio() {
             {/* Video placeholder - replace with actual video */}
             <video
               className="w-full h-full object-cover"
-              controls
+              autoPlay
               loop
+              muted
               playsInline
               poster="https://placehold.co/1920x1080/0D3D3D/B8935C?text=Your+Video+Montage"
             >
