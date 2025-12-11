@@ -33,7 +33,7 @@ export default function About() {
                   alt="Portrait of Austin Starke"
                   fill
                   priority
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className="object-cover transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent pointer-events-none" />
               </div>
