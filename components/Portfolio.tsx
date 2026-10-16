@@ -41,7 +41,6 @@ export default function Portfolio() {
               loop
               muted
               playsInline
-              poster="https://placehold.co/1920x1080/0D3D3D/B8935C?text=Your+Video+Montage"
             >
               <source src="/video/portfolio-reel.mp4" type="video/mp4" />
               Your browser does not support the video tag.

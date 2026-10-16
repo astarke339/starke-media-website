@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://starkemedia.com/sitemap.xml
-
-
+Sitemap: https://getstarkemedia.com/sitemap.xml

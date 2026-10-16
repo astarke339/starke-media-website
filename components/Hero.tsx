@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import ParticleBackground from './ParticleBackground'
+import { PROJECT_FORM_URL } from '@/lib/site'
 
 export default function Hero() {
   const scrollToSection = (id: string) => {
@@ -30,7 +31,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-gray-300 text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto font-light"
         >
-          Cinematic video and strategic social media for businesses that need to be seen. We turn your daily operations into content that drives revenue—not just engagement.
+          Cinematic short-form video and brand content for businesses that need to be seen. We turn your daily operations into content that drives revenue, not just engagement.
         </motion.p>
 
         <motion.div
@@ -45,18 +46,14 @@ export default function Hero() {
           >
             See the Work
           </button>
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="group px-8 py-4 bg-bronze text-black font-semibold rounded-sm transition-all duration-300 hover:bg-gold-light hover:bronze-glow transform hover:scale-105 min-w-[200px]"
+          <a
+            href={PROJECT_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group px-8 py-4 bg-bronze text-black font-semibold rounded-sm transition-all duration-300 hover:bg-gold-light hover:bronze-glow transform hover:scale-105 min-w-[200px] text-center"
           >
             Start a Project
-          </button>
-          <button
-            onClick={() => scrollToSection('pricing')}
-            className="group px-8 py-4 border-2 border-bronze text-bronze font-semibold rounded-sm transition-all duration-300 hover:bg-bronze hover:text-black hover:bronze-glow transform hover:scale-105 min-w-[200px]"
-          >
-            View Pricing
-          </button>
+          </a>
         </motion.div>
       </div>
 

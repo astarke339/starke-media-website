@@ -6,37 +6,27 @@ import { motion } from 'framer-motion'
 interface Stat {
   value: string
   label: string
-  source: string
+  detail: string
 }
 
 const stats: Stat[] = [
   {
-    value: '59%',
-    label: 'of prospects spend more time on sites with video content',
-    source: 'Google Research',
+    value: '6M+',
+    label: 'organic views generated for client businesses',
+    detail: 'Across Instagram and YouTube',
   },
   {
-    value: '71%',
-    label: 'of buyers say video builds trust before purchasing',
-    source: 'CDK Global',
-  },
-  {
-    value: '5x',
-    label: 'Social media delivers higher ROI than traditional advertising',
-    source: 'Industry Research',
-  },
-  {
-    value: '49%',
-    label: 'Video-first businesses grow revenue faster year-over-year',
-    source: 'Aberdeen Group',
+    value: '10',
+    label: 'years hands-on in the automotive industry',
+    detail: 'Wrap, PPF, and detail work',
   },
 ]
 
 function StatCounter({ value, inView }: { value: string; inView: boolean }) {
   const [count, setCount] = useState(0)
-  const isPercentage = value.includes('%')
-  const isMultiplier = value.includes('x')
-  const numericValue = parseInt(value)
+  const match = value.match(/^(\d+)(.*)$/)
+  const numericValue = match ? parseInt(match[1]) : 0
+  const suffix = match ? match[2] : ''
 
   useEffect(() => {
     if (!inView) return
@@ -61,7 +51,7 @@ function StatCounter({ value, inView }: { value: string; inView: boolean }) {
 
   return (
     <span className="font-mono text-5xl md:text-7xl text-bronze font-bold">
-      {inView ? (isMultiplier ? `${count}x` : `${count}${isPercentage ? '%' : ''}`) : value}
+      {inView ? `${count}${suffix}` : value}
     </span>
   )
 }
@@ -90,7 +80,7 @@ export default function Stats() {
   return (
     <section ref={ref} className="py-24 md:py-32 bg-luxury-green-dark grain-texture">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 max-w-5xl mx-auto">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -105,8 +95,8 @@ export default function Stats() {
               <p className="text-white text-lg md:text-xl mt-4 mb-2 font-body">
                 {stat.label}
               </p>
-              <p className="text-gray-medium text-sm font-body">
-                — {stat.source}
+              <p className="text-bronze/70 text-sm font-body tracking-wide uppercase">
+                {stat.detail}
               </p>
             </motion.div>
           ))}

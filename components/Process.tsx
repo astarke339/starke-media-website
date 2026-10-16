@@ -11,13 +11,13 @@ interface ProcessStep {
 const steps: ProcessStep[] = [
   {
     number: '01',
-    title: 'Discovery Call',
-    description: '30-minute call to understand your business, goals, and current content gaps',
+    title: 'Tell Us About You',
+    description: 'Fill out a quick form about your business, your goals, and where your content stands today.',
   },
   {
     number: '02',
-    title: 'Content Strategy',
-    description: 'Custom content plan built around your audience, industry, and budget',
+    title: 'Your Content Plan',
+    description: 'We send you a written, custom content plan built around your audience, industry, and goals.',
   },
   {
     number: '03',

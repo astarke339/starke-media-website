@@ -23,7 +23,7 @@ const services: Service[] = [
   {
     icon: <Lightbulb className="w-12 h-12" />,
     title: 'Marketing Strategy & Consulting',
-    description: "Monthly strategy sessions, performance analysis, and brand positioning. We find what&apos;s working, cut what&apos;s not, and optimize for ROI.",
+    description: "Monthly strategy sessions, performance analysis, and brand positioning. We find what's working, cut what's not, and optimize for ROI.",
   },
   {
     icon: <Camera className="w-12 h-12" />,

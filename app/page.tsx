@@ -5,16 +5,13 @@ import Portfolio from '@/components/Portfolio'
 import Services from '@/components/Services'
 import Process from '@/components/Process'
 import About from '@/components/About'
-import Pricing from '@/components/Pricing'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
-import ExitIntentPopup from '@/components/ExitIntentPopup'
 
 export default function Home() {
   return (
     <>
       <Navigation />
-      <ExitIntentPopup />
       <main className="min-h-screen">
         <Hero />
         <Stats />
@@ -22,12 +19,9 @@ export default function Home() {
         <Services />
         <Process />
         <About />
-        <Pricing />
         <Contact />
         <Footer />
       </main>
     </>
   )
 }
-
-

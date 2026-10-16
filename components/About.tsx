@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Instagram } from 'lucide-react'
+import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/site'
 
 export default function About() {
   return (
@@ -54,7 +55,7 @@ export default function About() {
             <p className="text-bronze text-lg font-body mb-6">Founder</p>
             
             <p className="text-gray-300 text-lg md:text-xl font-body leading-relaxed">
-              Started in the automotive industry—wrapping, PPF, detailing. Learned that most businesses don&apos;t need more content. They need better content, posted consistently, with a strategy behind it.
+              Started in the automotive industry: a decade of wrapping, PPF, and detailing. Learned that most businesses don&apos;t need more content. They need better content, posted consistently, with a strategy behind it.
             </p>
 
             <p className="text-gray-300 text-lg md:text-xl font-body leading-relaxed">
@@ -63,17 +64,17 @@ export default function About() {
 
             <div className="pt-4 space-y-4">
               <p className="text-bronze text-lg font-body">
-                Based in Michigan. Sharing the process @austin.starke
+                Based in Metro Detroit. See the latest work on Instagram.
               </p>
-              
+
               <a
-                href="https://instagram.com/austin.starke"
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-bronze hover:text-gold-light transition-colors duration-300 group"
               >
                 <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
-                <span className="font-body text-lg">@austin.starke</span>
+                <span className="font-body text-lg">@{INSTAGRAM_HANDLE}</span>
               </a>
             </div>
           </motion.div>

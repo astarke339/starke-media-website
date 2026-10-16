@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Playfair_Display, Montserrat, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import StructuredData from '@/components/StructuredData'
+import { SITE_URL } from '@/lib/site'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -21,20 +22,30 @@ const jetbrains = JetBrains_Mono({
   display: 'swap',
 })
 
+const title = 'Starke Media | Video Production & Content for Michigan Businesses'
+const description =
+  'Short-form video, brand films, and content for businesses that need to be seen. Backed by a decade in the automotive industry and 6M+ organic views generated for clients.'
+
 export const metadata: Metadata = {
-  title: 'Starke Media | Video Production & Social Media for Michigan Businesses',
-  description: 'Cinematic video production and social media management for businesses in Michigan. Monthly packages from $900.',
-  keywords: ['video production michigan', 'social media management', 'content marketing michigan', 'business video content', 'michigan video agency'],
+  metadataBase: new URL(SITE_URL),
+  title,
+  description,
+  keywords: ['video production michigan', 'automotive video production', 'content marketing michigan', 'business video content', 'michigan video agency', 'macomb county videographer'],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Starke Media | Video Production & Social Media for Michigan Businesses',
-    description: 'Cinematic video production and social media management for businesses in Michigan. Monthly packages from $900.',
+    title,
+    description,
+    url: SITE_URL,
+    siteName: 'Starke Media',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Starke Media | Video Production & Social Media for Michigan Businesses',
-    description: 'Cinematic video production and social media management for businesses in Michigan.',
+    title,
+    description,
   },
 }
 

@@ -13,7 +13,7 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > 20)
 
       // Detect active section
-      const sections = ['portfolio', 'services', 'pricing', 'about', 'contact']
+      const sections = ['portfolio', 'services', 'about', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -41,7 +41,6 @@ export default function Navigation() {
     { name: 'Work', id: 'portfolio' },
     { name: 'Services', id: 'services' },
     { name: 'About', id: 'about' },
-    { name: 'Packages', id: 'pricing' },
     { name: 'Contact', id: 'contact' },
   ]
 
