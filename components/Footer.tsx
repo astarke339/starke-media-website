@@ -1,43 +1,25 @@
-'use client'
-
-import { Instagram, Mail } from 'lucide-react'
-import { EMAIL, INSTAGRAM_URL } from '@/lib/site'
+import { EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/site'
 
 export default function Footer() {
   return (
-    <footer className="py-12 bg-luxury-green-darkest grain-texture border-t border-bronze-dark/30">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col items-center space-y-6">
-          <div className="flex items-center gap-6">
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-bronze hover:text-gold-light transition-colors duration-300 group"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+    <footer className="bg-racing-deep">
+      <div className="mx-auto max-w-site px-5 md:px-8 py-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p className="font-wide text-[15px] font-extrabold uppercase tracking-[0.04em]">Starke Media</p>
+          <p className="mt-2 text-sm text-sage">
+            Video production in Metro Detroit, serving businesses across Michigan.
+          </p>
+        </div>
+        <div className="flex flex-col gap-2 text-sm md:items-end">
+          <div className="flex gap-6">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-bone/80 hover:text-bone">
+              Instagram @{INSTAGRAM_HANDLE}
             </a>
-            <a
-              href={`mailto:${EMAIL}`}
-              className="text-bronze hover:text-gold-light transition-colors duration-300 group"
-              aria-label="Email"
-            >
-              <Mail className="w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
+            <a href={`mailto:${EMAIL}`} className="text-bone/80 hover:text-bone">
+              Email
             </a>
           </div>
-
-          <div className="text-center space-y-2">
-            <p className="text-white font-body text-sm">
-              © {new Date().getFullYear()} Starke Media. Built in Michigan.
-            </p>
-            <p className="text-gray-300 font-body text-xs">
-              Video Production • Short-Form Content • Brand Films
-            </p>
-            <p className="text-gray-300 font-body text-xs">
-              Serving Metro Detroit and businesses across Michigan
-            </p>
-          </div>
+          <p className="text-sage">© {new Date().getFullYear()} Starke Media</p>
         </div>
       </div>
     </footer>

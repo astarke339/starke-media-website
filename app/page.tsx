@@ -1,7 +1,7 @@
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
-import Stats from '@/components/Stats'
-import Portfolio from '@/components/Portfolio'
+import Industries from '@/components/Industries'
+import Approach from '@/components/Approach'
 import Services from '@/components/Services'
 import Process from '@/components/Process'
 import About from '@/components/About'
@@ -12,16 +12,16 @@ export default function Home() {
   return (
     <>
       <Navigation />
-      <main className="min-h-screen">
+      <main>
         <Hero />
-        <Stats />
-        <Portfolio />
+        <Industries />
+        <Approach />
         <Services />
         <Process />
         <About />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
     </>
   )
 }

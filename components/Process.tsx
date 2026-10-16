@@ -1,84 +1,41 @@
-'use client'
-
-import { motion } from 'framer-motion'
-
-interface ProcessStep {
-  number: string
-  title: string
-  description: string
-}
-
-const steps: ProcessStep[] = [
+const steps = [
   {
-    number: '01',
-    title: 'Tell Us About You',
-    description: 'Fill out a quick form about your business, your goals, and where your content stands today.',
+    title: 'Tell us about your business',
+    description: 'Fill out our project form with your goals and where your content stands today.',
   },
   {
-    number: '02',
-    title: 'Your Content Plan',
-    description: 'We send you a written, custom content plan built around your audience, industry, and goals.',
+    title: 'Get your content plan',
+    description: 'We send a written plan built around your audience, industry, and goals.',
   },
   {
-    number: '03',
-    title: 'Production & Editing',
-    description: 'We handle production and editing. You approve final cuts. Fast turnarounds, no surprises.',
+    title: 'We film and edit',
+    description: 'We handle production and editing. You review every video, with two rounds of revisions included.',
   },
   {
-    number: '04',
-    title: 'Launch & Optimize',
-    description: 'Content goes live. We track results and refine monthly.',
+    title: 'Post and improve',
+    description: 'Your content goes live. We track what performs and adjust from there.',
   },
 ]
 
 export default function Process() {
   return (
-    <section className="py-24 md:py-32 bg-luxury-green-darkest grain-texture">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-20 text-center"
-        >
-          The Process
-        </motion.h2>
-
-        <div className="relative">
-          {/* Connection line */}
-          <div className="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-bronze/30" />
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
-            {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.15 }}
-                viewport={{ once: true }}
-                className="relative text-center"
-              >
-                {/* Circle indicator */}
-                <div className="relative inline-flex items-center justify-center w-24 h-24 mb-6 border-4 border-bronze rounded-full mx-auto" style={{ backgroundColor: '#063831' }}>
-                  <span className="font-mono text-3xl text-bronze font-bold">
-                    {step.number}
-                  </span>
-                </div>
-
-                <h3 className="font-display text-2xl md:text-3xl text-white mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-gray-300 text-base md:text-lg font-body">
-                  {step.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+    <section className="border-t border-bone/10">
+      <div className="mx-auto max-w-site px-5 md:px-8 py-24 md:py-32">
+        <h2 className="font-wide text-4xl md:text-[3.4rem] font-extrabold leading-none tracking-[-0.03em]">
+          How it works
+        </h2>
+        <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+          {steps.map((step, i) => (
+            <li key={step.title} className="border-t-2 border-bronze pt-6">
+              <span className="font-wide text-lg font-bold text-bronze" aria-hidden>
+                {i + 1}
+              </span>
+              <h3 className="mt-3 font-semiwide text-xl font-bold leading-snug">{step.title}</h3>
+              <p className="mt-3 text-base leading-relaxed text-bone/75">{step.description}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   )
 }
-
-

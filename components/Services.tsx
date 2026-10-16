@@ -1,77 +1,50 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import { Camera, Target, Lightbulb, Video } from 'lucide-react'
-
-interface Service {
-  icon: React.ReactNode
-  title: string
-  description: string
-}
-
-const services: Service[] = [
+const services = [
   {
-    icon: <Video className="w-12 h-12" />,
-    title: 'Remote Content Editing',
-    description: "You film. We edit. Send raw footage from your phone and get back polished, platform-ready content within 48 hours. Perfect for teams who can capture but need professional post-production.",
+    title: 'Monthly content',
+    description:
+      'We film at your location and deliver a steady stream of edited short-form videos every month, with photos when you need them.',
   },
   {
-    icon: <Target className="w-12 h-12" />,
-    title: 'Social Media Management',
-    description: 'Full-service social media: strategy, scheduling, posting, engagement. We run your accounts so you can run your business. Proven systems built for consistency and growth.',
+    title: 'Remote editing',
+    description:
+      'You film on your phone, we edit. Send us raw footage and get back polished videos ready to post.',
   },
   {
-    icon: <Lightbulb className="w-12 h-12" />,
-    title: 'Marketing Strategy & Consulting',
-    description: "Monthly strategy sessions, performance analysis, and brand positioning. We find what's working, cut what's not, and optimize for ROI.",
+    title: 'Brand films',
+    description:
+      'A 60 to 90 second hero video for your website, YouTube, or a launch. Longer formats are available too.',
   },
   {
-    icon: <Camera className="w-12 h-12" />,
-    title: 'On-Site Video Production',
-    description: 'Professional filming at your location. Cinematic quality without the Hollywood budget. Flexible scheduling—monthly, bi-weekly, or weekly sessions.',
+    title: 'Ad creative',
+    description:
+      'Video built to run as paid ads on Facebook and Instagram, cut in the formats each placement needs.',
   },
 ]
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 md:py-32 grain-texture" style={{ backgroundColor: '#063831' }}>
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-16 text-center"
-        >
-          Services
-        </motion.h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="group p-8 border border-bronze-dark/30 rounded-sm hover:border-bronze transition-all duration-300 hover:bronze-glow hover:-translate-y-2"
-              style={{ backgroundColor: '#063831' }}
-            >
-              <div className="text-bronze mb-6 transform group-hover:scale-110 transition-transform duration-300">
-                {service.icon}
-              </div>
-              <h3 className="font-display text-2xl md:text-3xl text-white mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-300 text-lg font-body leading-relaxed">
-                {service.description}
-              </p>
-            </motion.div>
-          ))}
+    <section id="services" className="mx-auto max-w-site px-5 md:px-8 py-24 md:py-36 scroll-mt-16">
+      <div className="grid gap-10 md:grid-cols-12">
+        <div className="md:col-span-4">
+          <h2 className="font-wide text-4xl md:text-[3.4rem] font-extrabold leading-none tracking-[-0.03em]">
+            Services
+          </h2>
+          <p className="mt-5 max-w-[30ch] text-lg leading-relaxed text-sage">
+            Pick one, or combine them into a monthly plan that fits your business.
+          </p>
         </div>
+        <ul className="md:col-span-8 border-t border-bone/15">
+          {services.map((s) => (
+            <li
+              key={s.title}
+              className="grid gap-2 sm:gap-8 border-b border-bone/15 py-7 md:py-9 sm:grid-cols-[minmax(0,13rem)_1fr]"
+            >
+              <h3 className="font-semiwide text-xl md:text-2xl font-bold">{s.title}</h3>
+              <p className="max-w-[52ch] text-lg leading-relaxed text-bone/75">{s.description}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )
 }
-
-

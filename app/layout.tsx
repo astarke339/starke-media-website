@@ -1,25 +1,15 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Montserrat, JetBrains_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import StructuredData from '@/components/StructuredData'
 import { SITE_URL } from '@/lib/site'
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
+const archivo = localFont({
+  src: './fonts/archivo-latin-wdth-normal.woff2',
+  variable: '--font-archivo',
+  weight: '100 900',
   display: 'swap',
-})
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-  display: 'swap',
-})
-
-const jetbrains = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains',
-  display: 'swap',
+  declarations: [{ prop: 'font-stretch', value: '62% 125%' }],
 })
 
 const title = 'Starke Media | Video Production & Content for Michigan Businesses'
@@ -39,6 +29,7 @@ export const metadata: Metadata = {
     description,
     url: SITE_URL,
     siteName: 'Starke Media',
+    images: [{ url: '/images/reel-poster.jpg', width: 1920, height: 1080, alt: 'Starke Media client work' }],
     type: 'website',
     locale: 'en_US',
   },
@@ -46,6 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title,
     description,
+    images: ['/images/reel-poster.jpg'],
   },
 }
 
@@ -55,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${montserrat.variable} ${jetbrains.variable}`}>
+    <html lang="en" className={archivo.variable}>
       <head>
         <StructuredData />
       </head>

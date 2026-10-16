@@ -1,79 +1,163 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import ParticleBackground from './ParticleBackground'
+import { useEffect, useRef, useState } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
+import { Play, Volume2, VolumeX } from 'lucide-react'
 import { PROJECT_FORM_URL } from '@/lib/site'
 
+const ease = [0.22, 1, 0.36, 1] as const
+
 export default function Hero() {
-  const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const reduceMotion = useReducedMotion()
+  const [soundOn, setSoundOn] = useState(false)
+  const [playing, setPlaying] = useState(false)
+
+  // Respect reduced motion: don't autoplay, show the poster and a play button instead.
+  useEffect(() => {
+    const v = videoRef.current
+    if (!v) return
+    if (reduceMotion) {
+      v.pause()
+    } else {
+      v.play().catch(() => setPlaying(false))
+    }
+  }, [reduceMotion])
+
+  const watchWithSound = () => {
+    const v = videoRef.current
+    if (!v) return
+    v.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' })
+    v.currentTime = 0
+    v.muted = false
+    setSoundOn(true)
+    v.play()
   }
 
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(to bottom, #063831, #063831, #000000)' }}>
-      {/* Particle background */}
-      <ParticleBackground />
-      
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="font-display text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight"
-        >
-          Content That Sells
-        </motion.h1>
+  const toggleSound = () => {
+    const v = videoRef.current
+    if (!v) return
+    v.muted = !v.muted
+    setSoundOn(!v.muted)
+    if (v.paused) v.play()
+  }
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-gray-300 text-lg md:text-xl lg:text-2xl mb-12 max-w-3xl mx-auto font-light"
-        >
-          Cinematic short-form video and brand content for businesses that need to be seen. We turn your daily operations into content that drives revenue, not just engagement.
-        </motion.p>
+  const reveal = (delay: number) =>
+    reduceMotion
+      ? {}
+      : {
+          initial: { y: '105%' },
+          animate: { y: '0%' },
+          transition: { duration: 0.9, ease, delay },
+        }
+
+  return (
+    <section id="top" className="pt-28 md:pt-40">
+      <div className="mx-auto max-w-site px-5 md:px-8">
+        <h1 className="font-wide font-extrabold leading-[0.88] tracking-[-0.035em] text-[clamp(3.5rem,11vw,9.75rem)]">
+          <span className="block overflow-hidden pb-[0.06em]">
+            <motion.span className="block" {...reveal(0.05)}>
+              Content
+            </motion.span>
+          </span>
+          <span className="block overflow-hidden pb-[0.06em]">
+            <motion.span className="block" {...reveal(0.17)}>
+              that sells.
+            </motion.span>
+          </span>
+        </h1>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="mt-10 md:mt-14 grid gap-10 md:grid-cols-12 md:items-end"
+          initial={reduceMotion ? false : { opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.55 }}
         >
-          <button
-            onClick={() => scrollToSection('portfolio')}
-            className="group px-8 py-4 border-2 border-bronze text-bronze font-semibold rounded-sm transition-all duration-300 hover:bg-bronze hover:text-black hover:bronze-glow transform hover:scale-105 min-w-[200px]"
-          >
-            See the Work
-          </button>
-          <a
-            href={PROJECT_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group px-8 py-4 bg-bronze text-black font-semibold rounded-sm transition-all duration-300 hover:bg-gold-light hover:bronze-glow transform hover:scale-105 min-w-[200px] text-center"
-          >
-            Start a Project
-          </a>
+          <div className="md:col-span-7 lg:col-span-6">
+            <p className="max-w-[38ch] text-lg md:text-xl leading-relaxed text-bone/85 text-pretty">
+              Short-form video, brand films, and ad creative for Michigan businesses. Made by someone who spent ten years in the shop before picking up a camera.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a
+                href={PROJECT_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-[2px] bg-bronze px-7 py-4 text-center font-semibold text-racing-deep hover:bg-bronze-light transition-colors"
+              >
+                Start your project
+              </a>
+              <button
+                onClick={watchWithSound}
+                className="inline-flex items-center justify-center gap-2.5 rounded-[2px] border border-bone/30 px-7 py-4 font-semibold text-bone hover:border-bone/70 transition-colors"
+              >
+                <Play className="h-4 w-4 fill-current" aria-hidden />
+                Watch the reel
+              </button>
+            </div>
+          </div>
+
+          <dl className="md:col-span-5 lg:col-start-8 grid grid-cols-2 gap-6 border-t border-bone/15 pt-6">
+            <div className="flex flex-col-reverse">
+              <dt className="mt-2 text-[15px] text-sage">organic views for client businesses</dt>
+              <dd className="font-wide text-3xl md:text-[2.5rem] font-bold leading-none">6M+</dd>
+            </div>
+            <div className="flex flex-col-reverse">
+              <dt className="mt-2 text-[15px] text-sage">hands-on in the automotive industry</dt>
+              <dd className="font-wide text-3xl md:text-[2.5rem] font-bold leading-none">10 yrs</dd>
+            </div>
+          </dl>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        id="work"
+        className="mx-auto mt-14 md:mt-20 max-w-site px-0 md:px-8 scroll-mt-24"
+        initial={reduceMotion ? false : { opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease, delay: 0.7 }}
       >
-        <div className="w-6 h-10 border-2 border-bronze rounded-full flex items-start justify-center p-2">
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1.5 h-1.5 bg-bronze rounded-full"
+        <div className="relative overflow-hidden md:rounded-[2px] bg-racing-deep">
+          <video
+            ref={videoRef}
+            className="block aspect-video w-full object-cover"
+            src="/video/portfolio-reel.mp4"
+            poster="/images/reel-poster.jpg"
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            onPlay={() => setPlaying(true)}
+            onPause={() => setPlaying(false)}
+            aria-label="Starke Media reel of recent client work"
           />
+
+          {!playing && (
+            <button
+              onClick={watchWithSound}
+              className="absolute inset-0 flex items-center justify-center bg-racing-deep/30"
+              aria-label="Play the reel with sound"
+            >
+              <span className="flex h-20 w-20 items-center justify-center rounded-full bg-bronze text-racing-deep">
+                <Play className="h-7 w-7 translate-x-0.5 fill-current" aria-hidden />
+              </span>
+            </button>
+          )}
+
+          {playing && (
+            <button
+              onClick={toggleSound}
+              className="absolute bottom-3 left-3 md:bottom-5 md:left-5 inline-flex items-center gap-2 rounded-[2px] bg-racing-deep/80 px-3.5 py-2 text-sm font-medium text-bone backdrop-blur hover:bg-racing-deep transition-colors"
+              aria-label={soundOn ? 'Mute the reel' : 'Turn on sound'}
+            >
+              {soundOn ? <Volume2 className="h-4 w-4" aria-hidden /> : <VolumeX className="h-4 w-4" aria-hidden />}
+              {soundOn ? 'Sound on' : 'Sound off'}
+            </button>
+          )}
         </div>
+        <p className="mt-4 px-5 md:px-0 text-[15px] text-sage">
+          Recent client work, shot and edited by Starke Media.
+        </p>
       </motion.div>
     </section>
   )
 }
-
-
