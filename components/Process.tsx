@@ -19,15 +19,15 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="border-t border-bone/10">
+    <section className="border-t border-line">
       <div className="mx-auto max-w-site px-5 md:px-8 py-24 md:py-32">
-        <h2 className="font-wide text-4xl md:text-[3.4rem] font-extrabold leading-none tracking-[-0.03em]">
+        <h2 className="gloss-text font-wide text-4xl md:text-[3.4rem] font-extrabold leading-none tracking-[-0.03em]">
           How it works
         </h2>
         <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {steps.map((step, i) => (
-            <li key={step.title} className="border-t-2 border-bronze pt-6">
-              <span className="font-wide text-lg font-bold text-bronze" aria-hidden>
+            <li key={step.title} className="border-t-2 border-gold pt-6">
+              <span className="font-wide text-lg font-bold text-gold" aria-hidden>
                 {i + 1}
               </span>
               <h3 className="mt-3 font-semiwide text-xl font-bold leading-snug">{step.title}</h3>

@@ -52,19 +52,16 @@ export default function Hero() {
         }
 
   return (
-    <section id="top" className="pt-28 md:pt-40">
+    <section id="top" className="glow-top pt-28 md:pt-40">
       <div className="mx-auto max-w-site px-5 md:px-8">
-        <h1 className="font-wide font-extrabold leading-[0.88] tracking-[-0.035em] text-[clamp(3.5rem,11vw,9.75rem)]">
-          <span className="block overflow-hidden pb-[0.06em]">
-            <motion.span className="block" {...reveal(0.05)}>
-              Content
-            </motion.span>
-          </span>
-          <span className="block overflow-hidden pb-[0.06em]">
-            <motion.span className="block" {...reveal(0.17)}>
-              that sells.
-            </motion.span>
-          </span>
+        <h1 className="text-bone font-semiwide md:font-wide font-extrabold leading-[0.92] tracking-[-0.035em] text-[clamp(1.85rem,9.3vw,3.9rem)] md:text-[clamp(3.6rem,8.1vw,7.1rem)]">
+          {['Look premium.', 'Post consistently.', 'Sell more.'].map((line, i) => (
+            <span key={line} className="block overflow-hidden pb-[0.08em]">
+              <motion.span className="block gloss-text" {...reveal(0.05 + i * 0.12)}>
+                {line}
+              </motion.span>
+            </span>
+          ))}
         </h1>
 
         <motion.div
@@ -82,13 +79,13 @@ export default function Hero() {
                 href={PROJECT_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-[2px] bg-bronze px-7 py-4 text-center font-semibold text-racing-deep hover:bg-bronze-light transition-colors"
+                className="rounded-[2px] btn-gold px-7 py-4 text-center font-semibold text-ink"
               >
                 Start your project
               </a>
               <button
                 onClick={watchWithSound}
-                className="inline-flex items-center justify-center gap-2.5 rounded-[2px] border border-bone/30 px-7 py-4 font-semibold text-bone hover:border-bone/70 transition-colors"
+                className="btn-glass inline-flex items-center justify-center gap-2.5 rounded-[2px] px-7 py-4 font-semibold"
               >
                 <Play className="h-4 w-4 fill-current" aria-hidden />
                 Watch the reel
@@ -96,13 +93,13 @@ export default function Hero() {
             </div>
           </div>
 
-          <dl className="md:col-span-5 lg:col-start-8 grid grid-cols-2 gap-6 border-t border-bone/15 pt-6">
+          <dl className="md:col-span-5 lg:col-start-8 grid grid-cols-2 gap-6 border-t border-line pt-6">
             <div className="flex flex-col-reverse">
-              <dt className="mt-2 text-[15px] text-sage">organic views for client businesses</dt>
+              <dt className="mt-2 text-[15px] text-mist">organic views for client businesses</dt>
               <dd className="font-wide text-3xl md:text-[2.5rem] font-bold leading-none">6M+</dd>
             </div>
             <div className="flex flex-col-reverse">
-              <dt className="mt-2 text-[15px] text-sage">hands-on in the automotive industry</dt>
+              <dt className="mt-2 text-[15px] text-mist">hands-on in the automotive industry</dt>
               <dd className="font-wide text-3xl md:text-[2.5rem] font-bold leading-none">10 yrs</dd>
             </div>
           </dl>
@@ -116,7 +113,7 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease, delay: 0.7 }}
       >
-        <div className="relative overflow-hidden md:rounded-[2px] bg-racing-deep">
+        <div className="gloss-frame overflow-hidden md:rounded-[3px] bg-abyss">
           <video
             ref={videoRef}
             className="block aspect-video w-full object-cover"
@@ -134,10 +131,10 @@ export default function Hero() {
           {!playing && (
             <button
               onClick={watchWithSound}
-              className="absolute inset-0 flex items-center justify-center bg-racing-deep/30"
+              className="absolute inset-0 flex items-center justify-center bg-ink/40"
               aria-label="Play the reel with sound"
             >
-              <span className="flex h-20 w-20 items-center justify-center rounded-full bg-bronze text-racing-deep">
+              <span className="flex h-20 w-20 items-center justify-center rounded-full btn-gold text-ink">
                 <Play className="h-7 w-7 translate-x-0.5 fill-current" aria-hidden />
               </span>
             </button>
@@ -146,7 +143,7 @@ export default function Hero() {
           {playing && (
             <button
               onClick={toggleSound}
-              className="absolute bottom-3 left-3 md:bottom-5 md:left-5 inline-flex items-center gap-2 rounded-[2px] bg-racing-deep/80 px-3.5 py-2 text-sm font-medium text-bone backdrop-blur hover:bg-racing-deep transition-colors"
+              className="absolute bottom-3 left-3 md:bottom-5 md:left-5 inline-flex items-center gap-2 rounded-[2px] bg-ink/75 px-3.5 py-2 text-sm font-medium text-bone backdrop-blur hover:bg-abyss transition-colors"
               aria-label={soundOn ? 'Mute the reel' : 'Turn on sound'}
             >
               {soundOn ? <Volume2 className="h-4 w-4" aria-hidden /> : <VolumeX className="h-4 w-4" aria-hidden />}
@@ -154,7 +151,7 @@ export default function Hero() {
             </button>
           )}
         </div>
-        <p className="mt-4 px-5 md:px-0 text-[15px] text-sage">
+        <p className="mt-4 px-5 md:px-0 text-[15px] text-mist">
           Recent client work, shot and edited by Starke Media.
         </p>
       </motion.div>

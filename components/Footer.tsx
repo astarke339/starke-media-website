@@ -2,11 +2,11 @@ import { EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from '@/lib/site'
 
 export default function Footer() {
   return (
-    <footer className="bg-racing-deep">
+    <footer className="bg-ink border-t border-line">
       <div className="mx-auto max-w-site px-5 md:px-8 py-10 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-wide text-[15px] font-extrabold uppercase tracking-[0.04em]">Starke Media</p>
-          <p className="mt-2 text-sm text-sage">
+          <p className="mt-2 text-sm text-mist">
             Video production in Metro Detroit, serving businesses across Michigan.
           </p>
         </div>
@@ -19,7 +19,7 @@ export default function Footer() {
               Email
             </a>
           </div>
-          <p className="text-sage">© {new Date().getFullYear()} Starke Media</p>
+          <p className="text-mist">© {new Date().getFullYear()} Starke Media</p>
         </div>
       </div>
     </footer>

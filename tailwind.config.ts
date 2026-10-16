@@ -9,13 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Racing green paint and satin bronze film
-        racing: '#063831',
-        'racing-deep': '#03231E',
-        bronze: '#B8935C',
-        'bronze-light': '#D4B07A',
-        bone: '#ECE5D8',
-        sage: '#A3B8AF',
+        // Black paint, deep emerald, polished gold
+        ink: '#030504',
+        abyss: '#06110D',
+        line: '#123227',
+        emerald: {
+          900: '#04150F',
+          800: '#082A1F',
+          700: '#0D3D2D',
+          500: '#17694D',
+          300: '#5FB591',
+        },
+        gold: '#C9A35E',
+        'gold-light': '#E6CB93',
+        bone: '#EAE6DD',
+        mist: '#8FA39A',
       },
       fontFamily: {
         sans: ['var(--font-archivo)', 'system-ui', 'sans-serif'],

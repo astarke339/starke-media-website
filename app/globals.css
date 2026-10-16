@@ -8,18 +8,96 @@
   }
 
   body {
-    @apply bg-racing text-bone font-sans antialiased;
+    @apply bg-ink text-bone font-sans antialiased;
     overflow-x: hidden;
   }
 
   ::selection {
-    background: #b8935c;
-    color: #03231e;
+    background: #c9a35e;
+    color: #030504;
   }
 
   :focus-visible {
-    outline: 2px solid #d4b07a;
+    outline: 2px solid #e6cb93;
     outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Polished gold: a lit top edge and a soft shadow, like a metal badge */
+  .btn-gold {
+    color: #030504;
+    background-image: linear-gradient(180deg, #ecd6a4 0%, #cfaa64 46%, #b48c48 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.55),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.25),
+      0 12px 32px -12px rgba(201, 163, 94, 0.5);
+    transition: filter 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn-gold:hover {
+    filter: brightness(1.07);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.25),
+      0 16px 40px -12px rgba(201, 163, 94, 0.65);
+  }
+
+  /* Smoked glass */
+  .btn-glass {
+    color: #eae6dd;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.015));
+    border: 1px solid rgba(234, 230, 221, 0.18);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .btn-glass:hover {
+    border-color: rgba(234, 230, 221, 0.45);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+  }
+
+  /* Headline type with a soft reflection, like light across a hood */
+  .gloss-text {
+    background-image: linear-gradient(180deg, #fbf8f2 0%, #ebe6dc 52%, #b7b0a2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Hairline that catches the light: emerald fading through gold */
+  .sheen-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(95, 181, 145, 0.45) 30%, rgba(230, 203, 147, 0.55) 55%, transparent);
+  }
+
+  /* Video frame: thin bright edge plus an emerald glow underneath */
+  .gloss-frame {
+    position: relative;
+    box-shadow:
+      0 0 0 1px rgba(95, 181, 145, 0.16),
+      0 60px 140px -40px rgba(23, 105, 77, 0.6);
+  }
+
+  .gloss-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07) 0%, transparent 18%);
+  }
+
+  .glow-top {
+    background-image: radial-gradient(1100px 620px at 82% -12%, rgba(23, 105, 77, 0.38), transparent 62%);
+  }
+
+  .glow-bottom {
+    background-image: radial-gradient(900px 520px at 50% 115%, rgba(23, 105, 77, 0.5), transparent 65%);
+  }
+
+  .emerald-depth {
+    background-image: linear-gradient(180deg, #071a13 0%, #04100c 55%, #030504 100%);
   }
 }
 

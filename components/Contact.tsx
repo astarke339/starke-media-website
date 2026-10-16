@@ -2,9 +2,9 @@ import { EMAIL, PROJECT_FORM_URL } from '@/lib/site'
 
 export default function Contact() {
   return (
-    <section id="contact" className="scroll-mt-16">
+    <section id="contact" className="glow-bottom scroll-mt-16">
       <div className="mx-auto max-w-site px-5 md:px-8 py-28 md:py-40">
-        <h2 className="max-w-[14ch] font-wide font-extrabold leading-[0.98] tracking-[-0.035em] text-[clamp(2.6rem,7vw,6rem)] text-balance">
+        <h2 className="gloss-text max-w-[14ch] font-wide font-extrabold leading-[0.98] tracking-[-0.035em] text-[clamp(2.6rem,7vw,6rem)] text-balance">
           Get a content plan for your business.
         </h2>
         <div className="mt-10 grid gap-8 md:grid-cols-12 md:items-end">
@@ -16,13 +16,13 @@ export default function Contact() {
               href={PROJECT_FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-[2px] bg-bronze px-8 py-4 text-center text-lg font-semibold text-racing-deep hover:bg-bronze-light transition-colors"
+              className="rounded-[2px] btn-gold px-8 py-4 text-center text-lg font-semibold text-ink"
             >
               Start your project
             </a>
-            <p className="text-[15px] text-sage">
+            <p className="text-[15px] text-mist">
               Or email{' '}
-              <a href={`mailto:${EMAIL}`} className="text-bone underline decoration-bronze underline-offset-4 hover:decoration-bone break-all">
+              <a href={`mailto:${EMAIL}`} className="text-bone underline decoration-gold underline-offset-4 hover:decoration-bone break-all">
                 {EMAIL}
               </a>
             </p>

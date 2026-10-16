@@ -24,7 +24,7 @@ export default function Navigation() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || open ? 'bg-racing/95 backdrop-blur border-b border-bone/10' : 'bg-transparent'
+        scrolled || open ? 'bg-ink/80 backdrop-blur border-b border-line' : 'bg-transparent'
       }`}
     >
       <nav className="mx-auto flex h-16 md:h-20 max-w-site items-center justify-between px-5 md:px-8" aria-label="Main">
@@ -42,7 +42,7 @@ export default function Navigation() {
             href={PROJECT_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-[2px] bg-bronze px-5 py-2.5 text-[15px] font-semibold text-racing-deep hover:bg-bronze-light transition-colors"
+            className="rounded-[2px] btn-gold px-5 py-2.5 text-[15px] font-semibold text-ink"
           >
             Start your project
           </a>
@@ -59,7 +59,7 @@ export default function Navigation() {
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-bone/10 px-5 pb-6 pt-2">
+        <div className="md:hidden border-t border-line px-5 pb-6 pt-2">
           {links.map((link) => (
             <a
               key={link.href}
@@ -74,7 +74,7 @@ export default function Navigation() {
             href={PROJECT_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 block rounded-[2px] bg-bronze px-5 py-3.5 text-center font-semibold text-racing-deep"
+            className="mt-3 block rounded-[2px] btn-gold px-5 py-3.5 text-center font-semibold text-ink"
           >
             Start your project
           </a>
